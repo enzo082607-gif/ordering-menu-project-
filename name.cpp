@@ -22,14 +22,14 @@ void showMenu(const std::vector<Item>& menu) {
 
 int getInt(const std::string &prompt) {
     int v;
-    while (true) {
+    while (true) { //while loop 
         std::cout << prompt;
         if (std::cin >> v) {
             return v;
         }
         std::cout << "Invalid input. Please enter a number." << std::endl;
         std::cin.clear();
-        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); //this ensures that the user enters a valid integer 
     }
 }
 
